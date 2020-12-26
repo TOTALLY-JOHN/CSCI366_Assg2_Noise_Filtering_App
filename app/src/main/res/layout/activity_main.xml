@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303035"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/stopTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:text="Stop"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playDenoiseTextView"
+        app:layout_constraintTop_toBottomOf="@+id/playOriginalButton" />
+
+    <TextView
+        android:id="@+id/playOriginalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Play Original"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/playDenoiseTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playOriginalButton" />
+
+    <ImageView
+        android:id="@+id/playOriginalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="25dp"
+        android:onClick="startPlaying"
+        app:layout_constraintEnd_toStartOf="@+id/playDenoiseButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audioInfoTextView"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <ImageView
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="stopPlaying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playDenoiseButton"
+        app:layout_constraintTop_toBottomOf="@+id/audioInfoTextView"
+        app:srcCompat="@drawable/ic_baseline_stop_24" />
+
+    <ImageView
+        android:id="@+id/playDenoiseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="25dp"
+        android:onClick="startDenoisePlaying"
+        app:layout_constraintEnd_toStartOf="@+id/stopButton"
+        app:layout_constraintStart_toEndOf="@+id/playOriginalButton"
+        app:layout_constraintTop_toBottomOf="@+id/audioInfoTextView"
+        app:srcCompat="@drawable/ic_baseline_volume_off_24" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="290dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image1" />
+
+    <TextView
+        android:id="@+id/audioInfoTextView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:text="AudioInfo"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/playDenoiseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="Play De-noise"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/stopTextView"
+        app:layout_constraintStart_toEndOf="@+id/playOriginalTextView"
+        app:layout_constraintTop_toBottomOf="@+id/playOriginalButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
